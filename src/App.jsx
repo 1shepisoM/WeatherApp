@@ -57,12 +57,12 @@ function App() {
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
   </div>
 )}
-      {error && (
-        <p className="text-red-200 bg-red-500/20 p-2 rounded mt-4">
-          {error}
-        </p>
-      )}
-
+     {error && (
+  <div className="mt-6 bg-red-500/20 border border-red-400 text-red-100 p-4 rounded-xl">
+    <p className="font-semibold">⚠ City not found</p>
+    <p className="text-sm mt-1">Please check the spelling and try again.</p>
+  </div>
+)}
       {weatherData && <WeatherResults data={weatherData} />}
     </div>
   </div>
