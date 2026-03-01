@@ -1,7 +1,9 @@
 function WeatherResults({ data }) {
   return (
-    <div className="bg-orange-300 w-80 p-6 rounded-md shadow-md text-center">
-      <h2 className="text-2xl font-bold mb-2">{data.name}</h2>
+    <div className="mt-8 bg-white/20 backdrop-blur-md text-white p-6 rounded-2xl shadow-lg">
+      <h2 className="text-2xl font-semibold mb-2">
+        {data.name}
+      </h2>
 
       <img
         src={`https://openweathermap.org/img/wn/${data.icon}@2x.png`}
@@ -9,17 +11,18 @@ function WeatherResults({ data }) {
         className="mx-auto"
       />
 
-      <p className="text-4xl font-bold mt-2">
+      <p className="text-5xl font-bold mt-2">
         {Math.round(data.temperature)}°
       </p>
 
-      <p className="mt-2 capitalize">
-        Condition: {data.condition}
+      <p className="capitalize mt-2">
+        {data.condition}
       </p>
-      <p>Humidity: {data.humidity}%</p>
-      <p>Wind: {data.wind} m/s</p>
+
+      <div className="flex justify-between mt-4 text-sm">
+        <p>Humidity: {data.humidity}%</p>
+        <p>Wind: {data.wind} m/s</p>
+      </div>
     </div>
   );
 }
-
-export default WeatherResults;

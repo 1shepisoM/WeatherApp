@@ -42,20 +42,27 @@ function App() {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-teal-600 flex flex-col items-center py-12">
+ return (
+  <div className="min-h-screen bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center px-4">
+    <div className="w-full max-w-md text-center">
+
       <h1 className="text-white text-4xl font-bold mb-8">
         Weather Dashboard
       </h1>
 
       <SearchBar onSearch={handleSearch} />
 
-      {loading && <p className="text-white">Loading...</p>}
-      {error && <p className="text-red-200">{error}</p>}
+      {loading && <p className="text-white mt-4">Loading...</p>}
+      {error && (
+        <p className="text-red-200 bg-red-500/20 p-2 rounded mt-4">
+          {error}
+        </p>
+      )}
 
       {weatherData && <WeatherResults data={weatherData} />}
     </div>
-  );
+  </div>
+);
 }
 
 export default App;
