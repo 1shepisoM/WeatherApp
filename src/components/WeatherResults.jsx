@@ -26,3 +26,5 @@ function WeatherResults({ data }) {
     </div>
   );
 }
+
+export default WeatherResults;
