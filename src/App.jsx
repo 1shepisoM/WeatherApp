@@ -52,7 +52,11 @@ function App() {
 
       <SearchBar onSearch={handleSearch} />
 
-      {loading && <p className="text-white mt-4">Loading...</p>}
+      {loading && (
+  <div className="flex justify-center mt-6">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+  </div>
+)}
       {error && (
         <p className="text-red-200 bg-red-500/20 p-2 rounded mt-4">
           {error}
