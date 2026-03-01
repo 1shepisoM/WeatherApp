@@ -1,16 +1,53 @@
-# React + Vite
+# Weather App 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive weather application that allows users to check the current weather of any city worldwide. The app fetches real-time weather data and displays it in an intuitive and user-friendly interface.  
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search weather by city name.
+- Display current temperature, weather condition, humidity, and wind speed.
+- Responsive design for both desktop and mobile devices.
+- Error handling for invalid city names or API issues.
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository**
+   ```bash
+   https://github.com/1shepisoM/WeatherApp.git
+   ```
+2. **Navigate into the project directory**
+   ```bash
+   cd weather-app
+   ```
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+4. **Run the application**
+   ```bash
+   npm start
+   ```
+5. Open your browser
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** HTML, CSS, JavaScript, React.js  
+- **API:** [OpenWeatherMap API](https://openweathermap.org/api)  
+- **Styling:** Tailwind CSS  
+
+## Usage
+
+1. Enter the name of a city in the search bar.  
+2. Press **Enter** or click the **Search Icon** button.  
+3. View the weather information displayed for the selected city.  
+
+## API Key Setup
+
+To fetch live weather data, you need an API key from [OpenWeatherMap](https://openweathermap.org/api).  
+
+1. Sign up and get your API key.  
+2. Create a `.env` file in the root directory and add:  
+   ```
+   REACT_APP_WEATHER_API_KEY=your_api_key_here
+   ```
+3. Restart your development server.
